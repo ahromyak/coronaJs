@@ -45,5 +45,7 @@ gulp.task('make-js', function () {
 });
 
 gulp.task('make-css', function () {
-    
+    gulp.src('app/**/scss/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('assets/css'));
 });
