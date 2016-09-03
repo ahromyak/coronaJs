@@ -1,0 +1,13 @@
+### Yeoman template
+node_modules/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+
+# User-specific stuff:
+ .idea/workspace.xml
+ .idea/tasks.xml
+ .idea/dictionaries
+
+ *.log
