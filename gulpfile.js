@@ -1,11 +1,11 @@
 /**
  * Created by deepwest83 on 9/3/2016.
  */
-var gulp = require('gulp')
+var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
