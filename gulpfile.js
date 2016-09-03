@@ -27,24 +27,24 @@ var gulp = require('gulp')
 //     'node_modules/angular2/bundles/http.dev.js',
 //     'node_modules/angular2/bundles/router.dev.js'
 // ];
-gulp.task('source-concat', function() {
-    return gulp.src([
-            'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/angular/angular.min.js',
-            'node_modules/angular-animate/angular-animate.min.js',
-            'node_modules/angular-aria/angular-aria.min.js',
-            'node_modules/angular-material/angular-material.min.js',
-            'src/main/webapp/js/src/moment-with-ru.min.js',
-            'node_modules/angular-moment/angular-moment.min.js',
-            'node_modules/twix/dist/twix.min.js',
-            'src/main/webapp/js/src/lodash.min.js',
-            'src/main/webapp/js/src/lodash.core.min.js',
-            'src/main/webapp/js/src/ng-lodash.min.js'
-        ])
-        .pipe(newer(tempDir + 'source.min.js'))
-        .pipe(concat('source.min.js'))
-        .pipe(gulp.dest(tempDir))
-});
+// gulp.task('source-concat', function() {
+//     return gulp.src([
+//             'node_modules/jquery/dist/jquery.min.js',
+//             'node_modules/angular/angular.min.js',
+//             'node_modules/angular-animate/angular-animate.min.js',
+//             'node_modules/angular-aria/angular-aria.min.js',
+//             'node_modules/angular-material/angular-material.min.js',
+//             'src/main/webapp/js/src/moment-with-ru.min.js',
+//             'node_modules/angular-moment/angular-moment.min.js',
+//             'node_modules/twix/dist/twix.min.js',
+//             'src/main/webapp/js/src/lodash.min.js',
+//             'src/main/webapp/js/src/lodash.core.min.js',
+//             'src/main/webapp/js/src/ng-lodash.min.js'
+//         ])
+//         .pipe(newer(tempDir + 'source.min.js'))
+//         .pipe(concat('source.min.js'))
+//         .pipe(gulp.dest(tempDir))
+// });
 gulp.task('make-js', function () {
     gulp.src('/app/**/js/*.js')
         .pipe(concat('app.js'))
