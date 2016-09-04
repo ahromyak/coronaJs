@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="/assets/css/lib.css" rel="stylesheet" media="all">
-    <link href="/assets/css/app.css" rel="stylesheet" media="all">
+    <!--<link href="/app/assets/css/lib.css" rel="stylesheet" media="all">-->
+    <link href="assets/css/app.css" rel="stylesheet" media="all">
 </head>
 <body ng-app="myApp">
-<script src="/app/lib.js"></script>
-<script src="/app/app.js"></script>
+<div ng-controller="mainController">
+    Loading... {{mainTest}}
+</div>
+<script src="app/lib.js"></script>
+<script src="app/app.js"></script>
 </body>
 </html>

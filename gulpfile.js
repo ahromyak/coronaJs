@@ -30,6 +30,8 @@ gulp.task('source-concat', function() {
             'node_modules/angular-animate/angular-animate.min.js',
             'node_modules/angular-aria/angular-aria.min.js',
             'node_modules/angular-material/angular-material.min.js',
+            'node_modules/moment/moment.js',
+            'node_modules/moment/locale/de.js',
             'node_modules/angular-moment/angular-moment.min.js',
             'assets/js/lodash.min.js',
             'assets/js/lodash.core.min.js'

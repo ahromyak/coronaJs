@@ -1,3 +1,4 @@
-/**
- * Created by deepwest83 on 9/3/2016.
- */
+var cjs = angular.module('myApp', []);
+    cjs.controller('mainController', function($scope) {
+        $scope.mainTest = 'Hello world';
+    });
