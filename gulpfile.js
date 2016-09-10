@@ -9,45 +9,63 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    jsmin = require('gulp-jsmin'),
+    rename = require('gulp-rename');
 
-// const lib = [
-//     'node_modules/es6-shim/es6-shim.min.js',
-//     'node_modules/systemjs/dist/system-polyfills.js',
-//     'node_modules/angular2/es6/dev/src/testing/shims_for_IE.js',
-//     'node_modules/angular2/bundles/angular2-polyfills.min.js',
-//     'node_modules/systemjs/dist/system.src.js',
-//     'node_modules/rxjs/bundles/Rx.min.js',
-//     'node_modules/angular2/bundles/angular2.min.js',
-//     'node_modules/angular2/bundles/http.dev.js',
-//     'node_modules/angular2/bundles/router.dev.js'
-// ];
+var paths = {
+    scripts: ['main.js', 'app/**/js/*.js'],
+    css: ['app/**/scss/*.scss']
+};
 
-gulp.task('source-concat', function() {
+gulp.task('source-concat', function () {
     return gulp.src([
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/angular/angular.min.js',
             'node_modules/angular-animate/angular-animate.min.js',
             'node_modules/angular-aria/angular-aria.min.js',
-            'node_modules/angular-material/angular-material.min.js',
+            'node_modules/angular-ui-router/release/angular-ui-router.min.js',
             'node_modules/moment/moment.js',
             'node_modules/moment/locale/de.js',
             'node_modules/angular-moment/angular-moment.min.js',
+            'node_modules/material-design-lite/material.min.js',
             'assets/js/lodash.min.js',
             'assets/js/lodash.core.min.js'
         ])
         .pipe(concat('lib.js'))
+        .pipe(jsmin())
         .pipe(gulp.dest('app'));
 });
 
 gulp.task('make-js', function () {
-    gulp.src('app/**/js/*.js')
+    gulp.src(['main.js', 'app/**/js/*.js'])
         .pipe(concat('app.js'))
+        .pipe(jsmin())
         .pipe(gulp.dest('app'));
+});
+gulp.task('make-sourcecss', function () {
+    gulp.src([
+        'node_modules/material-design-lite/material.min.css'
+    ])
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cssmin())
+        .pipe(concat('source.css'))
+        .pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('make-css', function () {
-    gulp.src('app/**/scss/*.scss')
+    gulp.src([
+        'app/**/scss/*.scss'
+    ])
         .pipe(sass().on('error', sass.logError))
+        .pipe(cssmin())
+        .pipe(concat('app.css'))
         .pipe(gulp.dest('assets/css'));
 });
+
+gulp.task('watch', function() {
+    gulp.watch(paths.scripts, ['make-js']);
+    gulp.watch(paths.css, ['make-css']);
+});
+
+gulp.task('default', ['make-css', 'make-sourcecss', 'make-js', 'make-js', 'source-concat']);

@@ -1,4 +1,2 @@
-var cjs = angular.module('myApp', []);
-    cjs.controller('mainController', function($scope) {
-        $scope.mainTest = 'Hello world';
-    });
+
+var cjs=angular.module('myApp',['ui.router']);cjs.config(function($stateProvider,$urlRouterProvider){$urlRouterProvider.otherwise("/home");var homeState={name:'home',url:'/home',templateUrl:'app/components/home/html/home.html'};var contactState={name:'contact',url:'/contact',templateUrl:'app/components/home/html/contact.html'};$stateProvider.state(homeState);$stateProvider.state(contactState);});cjs.controller('mainController',function($scope){$scope.mainTest='Hello world';});
