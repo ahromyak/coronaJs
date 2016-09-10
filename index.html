@@ -2,81 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Golden Corona & Momoi Fishing/title>
+    <title>Golden Corona & Momoi Fishing</title>
     <link href="assets/css/source.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="assets/css/app.css" rel="stylesheet" media="all">
 </head>
-<body ng-app="myApp">
-<div ng-controller="mainController">
-    <div>
-        Loading... {{mainTest}}
-    </div>
-    <div>
-        <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                <!-- Left aligned menu below button -->
-                <button id="demo-menu-lower-left"
-                        class="mdl-button mdl-js-button mdl-button--icon">
-                    <i class="material-icons">more_vert</i>
-                </button>
-
-                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-                    for="demo-menu-lower-left">
-                    <li class="mdl-menu__item">Some Action</li>
-                    <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
-                    <li disabled class="mdl-menu__item">Disabled Action</li>
-                    <li class="mdl-menu__item">Yet Another Action</li>
-                </ul>
-            </div>
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                <!-- Right aligned menu below button -->
-                <button id="demo-menu-lower-right"
-                        class="mdl-button mdl-js-button mdl-button--icon">
-                    <i class="material-icons">more_vert</i>
-                </button>
-
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                    for="demo-menu-lower-right">
-                    <li class="mdl-menu__item">Some Action</li>
-                    <li class="mdl-menu__item">Another Action</li>
-                    <li disabled class="mdl-menu__item">Disabled Action</li>
-                    <li class="mdl-menu__item">Yet Another Action</li>
-                </ul>
-            </div>
+<body ng-app="myApp" ng-controller="mainController">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="custom-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Brandon Himpfen</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
         </div>
-
-        <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" ng-model="mainTest" type="text" id="sample3">
-                        <label class="mdl-textfield__label" for="sample3">Text...</label>
-                    </div>
-                </form>
-            </div>
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                <!-- Numeric Textfield with Floating Label -->
-                <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" ng-model="mainTest" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
-                        <label class="mdl-textfield__label" for="sample4">Number...</label>
-                        <span class="mdl-textfield__error">Input is not a number!</span>
-                    </div>
-                </form>
-            </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Sidebar Menu</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <ui-view></ui-view>
         </div>
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-            <i class="material-icons">add</i>
-        </button>
-    </div>
-
-    <div>
-
-        <a ui-sref="home" ui-sref-active="active">Home</a>
-        <a ui-sref="contact" >Contact</a>
-
-        <ui-view></ui-view>
-    </div>
+    </main>
 </div>
 <script src="app/lib.js"></script>
 <script src="app/app.js"></script>

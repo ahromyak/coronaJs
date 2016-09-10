@@ -45,7 +45,8 @@ gulp.task('make-js', function () {
 });
 gulp.task('make-sourcecss', function () {
     gulp.src([
-        'node_modules/material-design-lite/material.min.css'
+        'node_modules/material-design-lite/material.min.css',
+        'assets/css/greygold.min.css'
     ])
         .pipe(sass().on('error', sass.logError))
         .pipe(cssmin())
