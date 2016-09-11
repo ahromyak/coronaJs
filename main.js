@@ -52,7 +52,7 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
         name: 'home',
         url: '/home',
         templateUrl: 'app/components/home/html/home.html',
-        controller:'homeController'
+        controller: 'homeController'
     };
 
     var catalogState = {
