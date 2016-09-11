@@ -21,14 +21,8 @@
     </header>
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Навигация</span>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Главная</a>
-            <a class="mdl-navigation__link" href="">Опродукции</a>
-            <a class="mdl-navigation__link" href="">Каталог</a>
-            <a class="mdl-navigation__link" href="">Прайс лист</a>
-            <a class="mdl-navigation__link" href="">Обратная связь</a>
-            <a class="mdl-navigation__link" href="">Оплата и доставка</a>
-            <a class="mdl-navigation__link" href="">Контакты</a>
+        <nav class="mdl-navigation" ng-repeat="item in mainNavItems">
+            <a class="mdl-navigation__link" href="{{item.link}}">{{item.name}}</a>
         </nav>
     </div>
     <main class="mdl-layout__content">

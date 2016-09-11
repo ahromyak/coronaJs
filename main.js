@@ -3,6 +3,46 @@
  */
 var cjs = angular.module('myApp', ['ui.router']);
 
+cjs.controller('mainController', function ($scope) {
+    $scope.mainNavItems = [
+        {
+            name: 'Главная',
+            id: 1,
+            link: 'menu'
+        },
+        {
+            name: 'Опродукции',
+            id: 2,
+            link: 'menu'
+        },
+        {
+            name: 'Каталог',
+            id: 3,
+            link: 'menu'
+        },
+        {
+            name: 'Прайс лист',
+            id: 4,
+            link: 'menu'
+        },
+        {
+            name: 'Обратная связь',
+            id: 5,
+            link: 'menu'
+        },
+        {
+            name: 'Оплата и доставка',
+            id: 6,
+            link: 'menu'
+        },
+        {
+            name: 'Контакты',
+            id: 7,
+            link: 'menu'
+        }
+    ];
+});
+
 cjs.config(function ($stateProvider, $urlRouterProvider) {
 
     // For any unmatched url, send to /route1
@@ -11,7 +51,8 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
     var homeState = {
         name: 'home',
         url: '/home',
-        templateUrl: 'app/components/home/html/home.html'
+        templateUrl: 'app/components/home/html/home.html',
+        controller:'homeController'
     };
 
     var contactState = {
@@ -22,4 +63,14 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state(homeState);
     $stateProvider.state(contactState);
+
+    // $stateProvider
+    //     .state('/home', {
+    //         views: {
+    //             'home': {
+    //                 templateUrl: 'app/components/home/html/home.html',
+    //                 controller: 'mainController'
+    //             },
+    //         }
+    //     })
 });

@@ -38,11 +38,14 @@ gulp.task('source-concat', function () {
 });
 
 gulp.task('make-js', function () {
-    gulp.src(['main.js', 'app/**/js/*.js'])
+    gulp.src(['main.js',
+        'mainController.js', 
+        'app/**/js/*.js'])
         .pipe(concat('app.js'))
         .pipe(jsmin())
         .pipe(gulp.dest('app'));
 });
+
 gulp.task('make-sourcecss', function () {
     gulp.src([
         'node_modules/material-design-lite/material.min.css',
