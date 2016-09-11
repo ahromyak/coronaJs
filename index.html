@@ -22,7 +22,7 @@
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Навигация</span>
         <nav class="mdl-navigation" ng-repeat="item in mainNavItems">
-            <a class="mdl-navigation__link" href="{{item.link}}">{{item.name}}</a>
+            <a class="mdl-navigation__link" ui-sref="{{item.link}}">{{item.name}}</a>
         </nav>
     </div>
     <main class="mdl-layout__content">

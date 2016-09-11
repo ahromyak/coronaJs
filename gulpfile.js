@@ -40,7 +40,7 @@ gulp.task('source-concat', function () {
 gulp.task('make-js', function () {
     gulp.src(['main.js',
         'mainController.js', 
-        'app/**/js/*.js'])
+        'app/**/**/js/**/*.js'])
         .pipe(concat('app.js'))
         .pipe(jsmin())
         .pipe(gulp.dest('app'));

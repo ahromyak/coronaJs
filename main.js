@@ -8,44 +8,44 @@ cjs.controller('mainController', function ($scope) {
         {
             name: 'Главная',
             id: 1,
-            link: 'menu'
+            link: 'home'
         },
         {
             name: 'Опродукции',
             id: 2,
-            link: 'menu'
+            link: 'contact'
         },
         {
             name: 'Каталог',
             id: 3,
-            link: 'menu'
+            link: 'catalog'
         },
         {
             name: 'Прайс лист',
             id: 4,
-            link: 'menu'
+            link: 'pricelist'
         },
         {
             name: 'Обратная связь',
             id: 5,
-            link: 'menu'
+            link: 'contact'
         },
         {
             name: 'Оплата и доставка',
             id: 6,
-            link: 'menu'
+            link: 'payterm'
         },
         {
             name: 'Контакты',
             id: 7,
-            link: 'menu'
+            link: 'contact'
         }
     ];
 });
 
 cjs.config(function ($stateProvider, $urlRouterProvider) {
 
-    // For any unmatched url, send to /route1
+    // For any unmatched url, send to /home
     $urlRouterProvider.otherwise("/home");
 
     var homeState = {
@@ -55,14 +55,35 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
         controller:'homeController'
     };
 
+    var catalogState = {
+        name: 'catalog',
+        url: '/catalog',
+        templateUrl: 'app/components/catalog/html/catalog.html'
+    };
+
+    var pricelistState = {
+        name: 'pricelist',
+        url: '/pricelist',
+        templateUrl: 'app/components/pricelist/html/pricelist.html'
+    };
+
+    var paytermState = {
+        name: 'payterm',
+        url: '/payterm',
+        templateUrl: 'app/components/payterm/html/payterm.html'
+    };
+
     var contactState = {
         name: 'contact',
         url: '/contact',
-        templateUrl: 'app/components/home/html/contact.html'
+        templateUrl: 'app/components/contact/html/contact.html'
     };
 
     $stateProvider.state(homeState);
     $stateProvider.state(contactState);
+    $stateProvider.state(paytermState);
+    $stateProvider.state(pricelistState);
+    $stateProvider.state(catalogState);
 
     // $stateProvider
     //     .state('/home', {
