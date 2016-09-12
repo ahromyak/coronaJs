@@ -1,0 +1,23 @@
+body::before {
+  background-size: cover;
+  background-attachment: fixed;
+  content: '';
+  will-change: transform;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+}
+.card-wide.mdl-card {
+  width: 512px;
+}
+.card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('/assets/img/jpgs/colors/mobl21.jpg') center / cover;
+}
+.card-wide > .mdl-card__menu {
+  color: #fff;
+}

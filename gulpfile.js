@@ -34,7 +34,7 @@ gulp.task('source-concat', function () {
         ])
         .pipe(concat('lib.js'))
         .pipe(jsmin())
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest('assets/js/'));
 });
 
 gulp.task('make-js', function () {
@@ -43,7 +43,7 @@ gulp.task('make-js', function () {
         'app/**/**/js/**/*.js'])
         .pipe(concat('app.js'))
         .pipe(jsmin())
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest('assets/js/'));
 });
 
 gulp.task('make-sourcecss', function () {
@@ -59,7 +59,7 @@ gulp.task('make-sourcecss', function () {
 
 gulp.task('make-css', function () {
     gulp.src([
-        'app/**/scss/*.scss'
+        'app/**/**/scss/*.scss'
     ])
         .pipe(sass().on('error', sass.logError))
         .pipe(cssmin())
