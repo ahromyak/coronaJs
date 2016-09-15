@@ -4,94 +4,27 @@
 var cjs = angular.module('myApp', ['ui.router']);
 
 cjs.controller('mainController', function ($scope) {
-    $scope.mainNavItems = [
-        {
-            name: 'Главная',
-            id: 1,
-            link: 'home'
-        },
-        {
-            name: 'Опродукции',
-            id: 2,
-            link: 'contact'
-        },
-        {
-            name: 'Каталог',
-            id: 3,
-            link: 'catalog'
-        },
-        {
-            name: 'Прайс лист',
-            id: 4,
-            link: 'pricelist'
-        },
-        {
-            name: 'Обратная связь',
-            id: 5,
-            link: 'contact'
-        },
-        {
-            name: 'Оплата и доставка',
-            id: 6,
-            link: 'payterm'
-        },
-        {
-            name: 'Контакты',
-            id: 7,
-            link: 'contact'
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
         }
-    ];
-});
+    }
 
-cjs.config(function ($stateProvider, $urlRouterProvider) {
+    var menuList = document.getElementsByClassName("dng-hide");
 
-    // For any unmatched url, send to /home
-    $urlRouterProvider.otherwise("/home");
+    for (var menu in menuList) {
+        if (!menuList.hasOwnProperty(menu)) {
+            continue;
+        }
+        menuList[menu].onclick = function(){
+            document.getElementsByClassName("panel")[0].classList.remove('show');
+        };
+    }
 
-    var homeState = {
-        name: 'home',
-        url: '/home',
-        templateUrl: 'app/components/home/html/home.html',
-        controller: 'homeController'
-    };
-
-    var catalogState = {
-        name: 'catalog',
-        url: '/catalog',
-        templateUrl: 'app/components/catalog/html/catalog.html'
-    };
-
-    var pricelistState = {
-        name: 'pricelist',
-        url: '/pricelist',
-        templateUrl: 'app/components/pricelist/html/pricelist.html'
-    };
-
-    var paytermState = {
-        name: 'payterm',
-        url: '/payterm',
-        templateUrl: 'app/components/payterm/html/payterm.html'
-    };
-
-    var contactState = {
-        name: 'contact',
-        url: '/contact',
-        templateUrl: 'app/components/contact/html/contact.html'
-    };
-
-    $stateProvider.state(homeState);
-    $stateProvider.state(contactState);
-    $stateProvider.state(paytermState);
-    $stateProvider.state(pricelistState);
-    $stateProvider.state(catalogState);
-
-    // $stateProvider
-    //     .state('/home', {
-    //         views: {
-    //             'home': {
-    //                 templateUrl: 'app/components/home/html/home.html',
-    //                 controller: 'mainController'
-    //             },
-    //         }
-    //     })
+    $scope.mainTest = 'Hello world';
 });
