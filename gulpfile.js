@@ -101,6 +101,7 @@ gulp.task('make-css', function () {
 gulp.task('watch', function() {
     gulp.watch(source.css, ['make-css']);
     gulp.watch(source.js, ['make-js']);
+    gulp.watch('app/**/*.html', ['concatTemplate']);
 });
 
 gulp.task('concatTemplate', function () {
