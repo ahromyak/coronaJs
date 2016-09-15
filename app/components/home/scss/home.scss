@@ -19,14 +19,14 @@
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion.active, button.accordion:hover {
-  background-color: #ddd;
+.accordion.active, button.accordion:hover,.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  text-decoration: underline;
+  background: none;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 div.panel {
   //padding: 0 18px;
-  background-color: white;
   display: none;
 }
 
@@ -36,12 +36,13 @@ div.panel.show {
 }
 
 .mdl-layout__drawer.nav-bar--gradient {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ededed+10,d2e5e8+100 */
-  //background: #ededed; /* Old browsers */
-  //background: -moz-linear-gradient(-45deg, #ededed 10%, #d2e5e8 100%);
-  //background: -webkit-linear-gradient(-45deg, #ededed 10%, #d2e5e8 100%);
-  background: linear-gradient(135deg, #ededed 10%, #d2e5e8 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#d2e5e8', GradientType=1) !important;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf9e3+1,f4e91a+100 */
+  background: #fcf9e3; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #fcf9e3 1%, #f4e91a 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #fcf9e3 1%,#f4e91a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #fcf9e3 1%,#f4e91a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf9e3', endColorstr='#f4e91a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 //Remove it in future and find mdl way to style it
 .mdl-mega-footer.dng-footer{
@@ -52,10 +53,20 @@ div.panel.show {
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link,.mdl-mega-footer{
   color: #333;
-  font-size: 16px;
+  font-size: 18px;
   font-family: Raleway2;
+  padding: 2px 40px;
 }
+
 .dng-footer div:nth-child(2) p{
   text-decoration: underline;
   font-weight: 800;
+}
+
+.crn-img--small{
+  width: 110px;
+  height: 110px;
+}
+.panel.show{
+  padding-left: 25px;
 }
