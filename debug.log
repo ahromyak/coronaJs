@@ -1,0 +1,8 @@
+[0916/224625:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0916/224625:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0916/224625:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0916/224625:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0916/224625:ERROR:process_reader_win.cc(114)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0916/224625:ERROR:exception_snapshot_win.cc(88)] thread ID 6612 not found in process
+[0916/224625:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::InitializeException failed
+[0916/224625:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess, ntstatus=-1073741558
