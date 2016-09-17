@@ -1,7 +1,9 @@
 @font-face {
-  font-family: Raleway2;
-  src: url(/assets/fonts/raleway.light.ttf);
+  font-family: DidactGothic;
+  src: url(/assets/fonts/DidactGothic.ttf);
 }
+$font-stack:    DidactGothic;
+$font-size: 1.2em;
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   //background-color: #e0e0e0;
@@ -15,7 +17,7 @@
   outline: none;
   transition: 0.4s;
   font-weight: bold;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: $font-stack;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -54,8 +56,8 @@ div.panel.show {
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link,.mdl-mega-footer{
   color: #333;
   font-size: 18px;
-  font-family: Raleway2;
-  padding: 2px 40px;
+  font-family: $font-stack;
+  padding: 2px 30px;
 }
 
 .dng-footer div:nth-child(2) p{
@@ -69,4 +71,10 @@ div.panel.show {
 }
 .panel.show{
   padding-left: 25px;
+}
+.mdl-layout__drawer>.mdl-layout-title.crn-logo{
+  padding-left: 0px;
+}
+.mdl-cell, p{
+  font-size: $font-size;
 }

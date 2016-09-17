@@ -14,39 +14,39 @@ cjs.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         templateUrl: 'app/components/home/html/home.html'
     };
 
-    var projectsState = {
-        name: 'projects',
-        url: '/projects',
-        controller: 'projectsController',
-        templateUrl: 'app/components/projects/html/index.html'
+    var aboutState = {
+        name: 'about',
+        url: '/about',
+        controller: 'aboutController',
+        templateUrl: 'app/components/about/html/index.html'
     };
 
-    var backendState = {
-        name: 'backend',
-        url: '/backend',
-        controller: 'backendController',
-        templateUrl: 'app/components/backend/html/index.html'
+    var priceState = {
+        name: 'price',
+        url: '/price',
+        controller: 'priceController',
+        templateUrl: 'app/components/price/html/index.html'
     };
 
-    var mobileState = {
-        name: 'mobile',
-        url: '/mobile',
-        controller: 'mobileController',
-        templateUrl: 'app/components/mobile/html/index.html'
+    var connectState = {
+        name: 'connect',
+        url: '/connect',
+        controller: 'connectController',
+        templateUrl: 'app/components/connect/html/index.html'
     };
 
-    var frontendtState = {
-        name: 'frontend',
-        url: '/frontend',
-        controller: 'frontendController',
-        templateUrl: 'app/components/frontend/html/index.html'
+    var sitemapState = {
+        name: 'sitemap',
+        url: '/sitemap',
+        controller: 'sitemapController',
+        templateUrl: 'app/components/sitemap/html/index.html'
     };
 
-    var cmsState = {
-        name: 'cms',
-        url: '/cms',
-        controller: 'cmsController',
-        templateUrl: 'app/components/cms/html/index.html'
+    var oplataState = {
+        name: 'oplata',
+        url: '/oplata',
+        controller: 'oplataController',
+        templateUrl: 'app/components/oplata/html/index.html'
     };
 
     var designState = {
@@ -71,11 +71,11 @@ cjs.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     };
 
     $stateProvider.state(homeState);
-    $stateProvider.state(projectsState);
-    $stateProvider.state(backendState);
-    $stateProvider.state(mobileState);
-    $stateProvider.state(frontendtState);
-    $stateProvider.state(cmsState);
+    $stateProvider.state(aboutState);
+    $stateProvider.state(priceState);
+    $stateProvider.state(connectState);
+    $stateProvider.state(sitemapState);
+    $stateProvider.state(oplataState);
     $stateProvider.state(designState);
     $stateProvider.state(codeigniterState);
     $stateProvider.state(zendState);

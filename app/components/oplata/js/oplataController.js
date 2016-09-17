@@ -1,8 +1,8 @@
 /**
  * Created by devds on 13.09.16.
  */
-cjs.controller('cmsController', function ($scope) {
-    $scope.mainTest = 'cms Hello world';
+cjs.controller('oplataController', function ($scope) {
+    $scope.mainTest = 'price Hello world';
     // var dialog = document.querySelector('dialog');
     // var showDialogButton = document.querySelector('#show-dialog');
     // if (! dialog.showModal) {
