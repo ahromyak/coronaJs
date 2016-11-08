@@ -20,6 +20,7 @@ var gulp = require('gulp'),
 var source = {
     css:[
         'main.scss',
+        'src/**/*.scss',
         'app/**/scss/*.scss'
     ],
     js:[

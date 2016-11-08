@@ -1,0 +1,127 @@
+@media screen and (max-height: 700px) {
+  .mdl-navigation {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mdl-layout__drawer-button {
+    margin: 12px;
+    background: #fff;
+  }
+}
+
+@font-face {
+  font-family: DidactGothic;
+  src: url(/assets/fonts/DidactGothic.ttf);
+}
+
+$font-stack: DidactGothic;
+$font-size: 1.2em;
+$font-small: 0.8em;
+$font-medium: 1.2em;
+
+.mdl-layout__drawer.nav-bar--gradient {
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e2e1de+0,e2a20d+100 */
+  background: #e2e1de; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #e2e1de 0%, #e2a20d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #e2e1de 0%, #e2a20d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #e2e1de 0%, #e2a20d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e1de', endColorstr='#e2a20d', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+//Remove it in future and find mdl way to style it
+.mdl-mega-footer.dng-footer {
+  bottom: 0px;
+  padding-bottom: 20px;
+  position: absolute;
+  background: none;
+  overflow-x: hidden;
+}
+
+.mdl-mega-footer {
+  color: $maincolor;
+  font-size: 18px;
+  font-family: $font-stack;
+  padding: 2px 30px;
+}
+
+.dng-footer div:nth-child(2) p {
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+.crn-img--small {
+  width: 110px;
+  height: 110px;
+}
+
+.mdl-layout__drawer > .mdl-layout-title.crn-logo {
+  padding-left: 0px;
+}
+
+.mdl-cell, p {
+  font-size: $font-size;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.gld-footer__desc {
+  font-size: $font-small;
+  margin-bottom: 5px;
+}
+
+.mdl-navigation {
+  max-height: 460px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  li {
+    list-style: none;
+    padding: 0px;
+    a {
+      padding: 0px;
+    }
+  }
+
+  &__link:hover {
+    cursor: pointer;
+  }
+}
+
+.mdl-layout__drawer {
+  .mdl-navigation {
+    .mdl-navigation__link {
+      padding: 2px 0px;
+      color: $maincolor;
+    }
+    .mdl-navigation__link:hover{
+      background: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+.gld-submenu{
+  padding-right: 8px;
+  padding-left: 12px;
+}
+
+.gld-submenu{
+  transition: opacity 1s,height 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.gld-submenu.show{
+  transition: opacity 1s,height 1s ease-out;
+  opacity: 1;
+  height: 270px;
+}

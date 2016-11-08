@@ -5,26 +5,28 @@ var cjs = angular.module('myApp', ['ui.router']);
 
 cjs.controller('mainController', function ($scope) {
 
-    var acc = document.getElementsByClassName("accordion");
-    var i;
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            this.classList.toggle("active");
-            this.nextElementSibling.classList.toggle("show");
-        }
-    }
+    $scope.mainMenu = false;
 
-    var menuList = document.getElementsByClassName("dng-hide");
+    // var acc = document.getElementsByClassName("accordion");
+    // var i;
+    //
+    // for (i = 0; i < acc.length; i++) {
+    //     acc[i].onclick = function(){
+    //         this.classList.toggle("active");
+    //         this.nextElementSibling.classList.toggle("show");
+    //     }
+    // }
+    //
+    // var menuList = document.getElementsByClassName("dng-hide");
+    //
+    // for (var menu in menuList) {
+    //     if (!menuList.hasOwnProperty(menu)) {
+    //         continue;
+    //     }
+    //     menuList[menu].onclick = function(){
+    //         document.getElementsByClassName("panel")[0].classList.remove('show');
+    //     };
+    // }
 
-    for (var menu in menuList) {
-        if (!menuList.hasOwnProperty(menu)) {
-            continue;
-        }
-        menuList[menu].onclick = function(){
-            document.getElementsByClassName("panel")[0].classList.remove('show');
-        };
-    }
-
-    $scope.mainTest = 'Hello world';
 });

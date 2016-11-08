@@ -32,27 +32,29 @@
             <p></p>
             <span class="mdl-layout-title crn-logo mdl-typography--text-center"><img class="crn-img--small" src="assets/images/corona.png"></span>
             <nav class="mdl-navigation">
-                <p></p>
-                <a class="mdl-navigation__link dng-hide" ui-sref="home"><b>Главная</b></a>
-                <div class="accordion mdl-navigation__link">Каталог</div>
-                <div class="panel">
-                    <a class="mdl-navigation__link" ui-sref="backend.codeigniter"><b>Сетеполотно из скрученной лески</b></a>
-                    <a class="mdl-navigation__link" ui-sref="frontend"><b>Сетеполотно из капрона</b></a>
-                    <a class="mdl-navigation__link" ui-sref="frontend"><b>Сетеполотно из лески</b></a>
-                    <a class="mdl-navigation__link" ui-sref="cms"><b>Рыболовные сети для промышленного лова</b></a>
-                    <a class="mdl-navigation__link" ui-sref="java"><b>Мононить (леска)</b></a>
-                    <a class="mdl-navigation__link" ui-sref="java"><b>Сети для защиты от птиц</b></a>
-                    <a class="mdl-navigation__link" ui-sref="java"><b>Шнур (фал) тонущий</b></a>
-                    <a class="mdl-navigation__link" ui-sref="java"><b>Цветовая гамма</b></a>
-                </div>
-                <a class="mdl-navigation__link dng-hide" ui-sref="connect"><b>Обратная связь</b></a>
-                <a class="mdl-navigation__link dng-hide" ui-sref="price"><b>Прайс лист</b></a>
-                <a class="mdl-navigation__link dng-hide" ui-sref="sitemap"><b>Карта сайта</b></a>
-                <a class="mdl-navigation__link dng-hide" ui-sref="contact"><b>Контакт</b></a>
+                <ul>
+                    <li><a ui-sref="home" class="mdl-navigation__link">Главная</a></li>
+                    <li><a class="mdl-navigation__link" ng-click="mainMenu = !mainMenu">Каталог</a>
+                        <ul class="gld-submenu" ng-class="{'show': mainMenu}">
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из скрученной лески</a></li>
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из капрона</a></li>
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из лески</a></li>
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Рыболовные сети для промышленного лова</a></li>
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Мононить (леска)</a></li>
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Сети для защиты от птиц</a></li>
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Шнур (фал) тонущий</a></li>
+                            <li><a ui-sref="cms" class="mdl-navigation__link">Цветовая гамма</a></li>
+                        </ul>
+                    </li>
+                    <li><a ui-sref="connect" class="mdl-navigation__link">Обратная связь</a></li>
+                    <li><a ui-sref="price" class="mdl-navigation__link">Прайс лист</a></li>
+                    <li><a ui-sref="sitemap" class="mdl-navigation__link">Карта сайта</a></li>
+                    <li><a ui-sref="contact" class="mdl-navigation__link">Контакт</a></li>
+                </ul>
             </nav>
             <div class="mdl-mega-footer dng-footer">
-                <div><p>Momoi & Golden Corona</p></div>
-                <div><p >goldencorona.com</p></div>
+                <div><p class="gld-footer__desc">Momoi & Golden Corona</p></div>
+                <div><p class="gld-footer__desc">goldencorona.com</p></div>
             </div>
         </div>
         <main class="mdl-layout__content">
