@@ -4,6 +4,15 @@
   }
 }
 
+.crn-main{
+  &__text{
+    padding: 15px 25px 0px 25px;
+  }
+  &__image{
+    max-height: 900px;
+  }
+}
+
 @media (max-width: 1599px){
   .main-contents{
     //padding-top: 65px;

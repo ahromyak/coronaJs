@@ -3,30 +3,14 @@
  */
 var cjs = angular.module('myApp', ['ui.router']);
 
-cjs.controller('mainController', function ($scope) {
+cjs.controller('mainController', function ($scope, $http) {
 
 
     $scope.mainMenu = false;
 
-    // var acc = document.getElementsByClassName("accordion");
-    // var i;
-    //
-    // for (i = 0; i < acc.length; i++) {
-    //     acc[i].onclick = function(){
-    //         this.classList.toggle("active");
-    //         this.nextElementSibling.classList.toggle("show");
-    //     }
-    // }
-    //
-    // var menuList = document.getElementsByClassName("dng-hide");
-    //
-    // for (var menu in menuList) {
-    //     if (!menuList.hasOwnProperty(menu)) {
-    //         continue;
-    //     }
-    //     menuList[menu].onclick = function(){
-    //         document.getElementsByClassName("panel")[0].classList.remove('show');
-    //     };
-    // }
+    $http.get('/api/client/categorys.php').success(function (data) {
+        $scope.categorys = data;
+    });
+
 
 });

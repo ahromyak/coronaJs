@@ -27,17 +27,18 @@
                     <ul>
                         <li><a ui-sref="home" class="mdl-navigation__link">Главная</a></li>
                         <li><a class="mdl-navigation__link" ng-click="mainMenu = !mainMenu">Каталог</a>
-                            <ul class="gld-submenu" ng-class="{'show': mainMenu}">
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из скрученной лески</a>
-                                </li>
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из капрона</a></li>
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из лески</a></li>
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Рыболовные сети для промышленного
-                                    лова</a></li>
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Мононить (леска)</a></li>
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Сети для защиты от птиц</a></li>
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Шнур (фал) тонущий</a></li>
-                                <li><a ui-sref="cms" class="mdl-navigation__link">Цветовая гамма</a></li>
+                            <ul class="gld-submenu" ng-class="{'show': mainMenu}" >
+                                <li ng-repeat="category in categorys"><a ui-sref="cms" class="mdl-navigation__link">{{category.name}}</a></li>
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из скрученной лески</a>-->
+                                <!--</li>-->
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из капрона</a></li>-->
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из лески</a></li>-->
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Рыболовные сети для промышленного-->
+                                    <!--лова</a></li>-->
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Мононить (леска)</a></li>-->
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Сети для защиты от птиц</a></li>-->
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Шнур (фал) тонущий</a></li>-->
+                                <!--<li><a ui-sref="cms" class="mdl-navigation__link">Цветовая гамма</a></li>-->
                             </ul>
                         </li>
                         <li><a ui-sref="connect" class="mdl-navigation__link">Обратная связь</a></li>

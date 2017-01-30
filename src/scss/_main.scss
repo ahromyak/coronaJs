@@ -125,11 +125,7 @@ h4 {
 .gld-submenu.show{
   transition: opacity 1s,height 1s ease-out;
   opacity: 1;
-  height: 270px;
-}
-
-.page-content{
-  //padding-left: 100px;
+  min-height: 200px;
 }
 
 .pad-left35{
