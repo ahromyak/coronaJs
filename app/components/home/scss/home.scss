@@ -3,3 +3,29 @@
     width: 100%;
   }
 }
+
+@media (max-width: 1599px){
+  .main-contents{
+    //padding-top: 65px;
+  }
+}
+
+@media (max-width: 1199px){
+  .main-contents{
+    //padding-top: 65px;
+  }
+}
+
+
+@media (max-width: 1023px){
+  .main-contents{
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 767px){
+}
+
+
+@media (max-width: 479px){
+}

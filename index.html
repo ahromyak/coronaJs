@@ -8,6 +8,7 @@
     <link href="assets/css/app.css" rel="stylesheet" media="all">
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <link rel="manifest" href="assets/images/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -15,37 +16,43 @@
 </head>
 <body ng-app="myApp">
 <div ng-controller="mainController">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer ">
-        <div class="mdl-layout__drawer nav-bar--gradient">
-            <p></p>
-            <span class="mdl-layout-title crn-logo mdl-typography--text-center"><img class="crn-img--small" src="assets/images/corona.png"></span>
-            <nav class="mdl-navigation">
-                <ul>
-                    <li><a ui-sref="home" class="mdl-navigation__link">Главная</a></li>
-                    <li><a class="mdl-navigation__link" ng-click="mainMenu = !mainMenu">Каталог</a>
-                        <ul class="gld-submenu" ng-class="{'show': mainMenu}">
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из скрученной лески</a></li>
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из капрона</a></li>
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из лески</a></li>
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Рыболовные сети для промышленного лова</a></li>
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Мононить (леска)</a></li>
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Сети для защиты от птиц</a></li>
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Шнур (фал) тонущий</a></li>
-                            <li><a ui-sref="cms" class="mdl-navigation__link">Цветовая гамма</a></li>
-                        </ul>
-                    </li>
-                    <li><a ui-sref="connect" class="mdl-navigation__link">Обратная связь</a></li>
-                    <li><a ui-sref="price" class="mdl-navigation__link">Прайс лист</a></li>
-                    <li><a ui-sref="sitemap" class="mdl-navigation__link">Карта сайта</a></li>
-                    <li><a ui-sref="contact" class="mdl-navigation__link">Контакт</a></li>
-                </ul>
-            </nav>
-            <div class="mdl-mega-footer dng-footer">
-                <div><p class="gld-footer__desc">Momoi & Golden Corona</p></div>
-                <div><p class="gld-footer__desc">goldencorona.com</p></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+        <!--<div>-->
+            <div class="mdl-layout__drawer nav-bar--gradient">
+                <p></p>
+                <span class="mdl-layout-title crn-logo">
+                    <img class="crn-img--small" src="assets/images/corona.png">
+                </span>
+                <nav class="mdl-navigation">
+                    <ul>
+                        <li><a ui-sref="home" class="mdl-navigation__link">Главная</a></li>
+                        <li><a class="mdl-navigation__link" ng-click="mainMenu = !mainMenu">Каталог</a>
+                            <ul class="gld-submenu" ng-class="{'show': mainMenu}">
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из скрученной лески</a>
+                                </li>
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из капрона</a></li>
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Сетеполотно из лески</a></li>
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Рыболовные сети для промышленного
+                                    лова</a></li>
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Мононить (леска)</a></li>
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Сети для защиты от птиц</a></li>
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Шнур (фал) тонущий</a></li>
+                                <li><a ui-sref="cms" class="mdl-navigation__link">Цветовая гамма</a></li>
+                            </ul>
+                        </li>
+                        <li><a ui-sref="connect" class="mdl-navigation__link">Обратная связь</a></li>
+                        <li><a ui-sref="price" class="mdl-navigation__link">Прайс лист</a></li>
+                        <li><a ui-sref="sitemap" class="mdl-navigation__link">Карта сайта</a></li>
+                        <li><a ui-sref="contact" class="mdl-navigation__link">Контакт</a></li>
+                    </ul>
+                </nav>
+                <div class="mdl-mega-footer dng-footer">
+                    <div><p class="gld-footer__desc">Momoi & Golden Corona</p></div>
+                    <div><p class="gld-footer__desc">goldencorona.com</p></div>
+                </div>
             </div>
-        </div>
-        <main class="mdl-layout__content">
+        <!--</div>-->
+        <main class="mdl-layout__content main-contents">
             <div class="page-content">
                 <div ui-view></div>
             </div>

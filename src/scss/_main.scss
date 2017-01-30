@@ -61,7 +61,7 @@ $font-medium: 1.2em;
 }
 
 .mdl-layout__drawer > .mdl-layout-title.crn-logo {
-  padding-left: 0px;
+  padding-left: 35px;
 }
 
 .mdl-cell, p {
@@ -124,4 +124,12 @@ h4 {
   transition: opacity 1s,height 1s ease-out;
   opacity: 1;
   height: 270px;
+}
+
+.page-content{
+  //padding-left: 100px;
+}
+
+.pad-left35{
+ padding-left: 35px;
 }
