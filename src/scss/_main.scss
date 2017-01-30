@@ -1,4 +1,11 @@
-@media screen and (max-height: 700px) {
+@media screen and (max-width: 1023px) {
+  .mdl-layout__drawer-button {
+    margin: 12px;
+    background: #fff;
+  }
+}
+
+@media screen and (max-height: 699px) {
   .mdl-navigation {
     max-height: 300px;
     overflow-y: auto;
@@ -6,12 +13,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .mdl-layout__drawer-button {
-    margin: 12px;
-    background: #fff;
-  }
-}
+
 
 @font-face {
   font-family: DidactGothic;
